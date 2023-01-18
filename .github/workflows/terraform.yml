@@ -7,7 +7,7 @@ on:
 
 jobs:
   call-workflow:
-    uses: adityarap/terraform-github-actions-example/.github/workflows/calledflow.yml@main
+    uses: ./.github/workflows/calledflow.yml
     secrets:
       token: ${{ secrets.TOKEN }}
 
