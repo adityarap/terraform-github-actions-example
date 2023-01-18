@@ -147,10 +147,10 @@ jobs:
         server_address: smtp.gmail.com
         server_port: 465
           # user credentials
-#           # Optional (recommended) mail server username:
-#           username: ${{ secrets.EMAIL_USERNAME }}
-#           # Optional (recommended) mail server password:
-#           password: ${{ secrets.EMAIL_PASSWORD }}
+          # Optional (recommended) mail server username:
+        username: adhi.rap93@gmail.com
+          # Optional (recommended) mail server password:
+        password: Raparthi@12345
           # email subject
         subject: job status
           # email body as text
