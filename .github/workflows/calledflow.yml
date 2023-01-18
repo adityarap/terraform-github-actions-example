@@ -2,10 +2,10 @@ name: calledflow
 
 on:
   workflow_call:
-    inputs:
-      username:
-        required: true
-        type: string
+#     inputs:
+#       username:
+#         required: true
+#         type: string
     secrets:
       token:
         required: true
