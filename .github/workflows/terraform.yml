@@ -7,7 +7,7 @@ on:
 
 jobs:
   call-workflow:
-    uses: adityarap/terraform-github-actions-example/.github/workflows/calledflow.yml@main
+    uses: adityarap/terraform-github-actions-example/.github/workflows/calledflow.yml
 
   terraform-actions:
     name: Workflow
