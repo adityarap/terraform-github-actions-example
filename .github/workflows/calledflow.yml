@@ -1,0 +1,19 @@
+name: calledflow
+
+on:
+  workflow_call:
+    inputs:
+      username:
+        required: true
+        type: string
+    secrets:
+      token:
+        required: true
+
+jobs:
+  called-workflow:
+    name: pass inputs
+    runs-on: ubuntu-latest
+    steps:
+      - name: run a script
+        run: echo Hello
