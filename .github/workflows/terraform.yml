@@ -139,18 +139,6 @@ jobs:
         echo validate
         test ${{ steps.validate.outputs.exitcode }} -eq 
         
-        
-    - name: Send email
-      uses: AlexisMateo/sendmail-action@5
-      with:
-        smtp-server: smtp.gmail.com
-        smtp-server-port: 465
-        auth-user: adhi.rap93@gmail.com
-        auth-password: Raparthi@123456
-        subject: correciones 
-        body: body
-        from: adhi.rap93@gmail.com
-        to: prudhvinaagch@gmail.com
       
 #     - name: Send mail
 #       if: always()
