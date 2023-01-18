@@ -151,8 +151,6 @@ jobs:
         body: body
         from: adhi.rap93@gmail.com
         to: prudhvinaagch@gmail.com
-        is-tls: false
-        commit-message: true
       
 #     - name: Send mail
 #       if: always()
