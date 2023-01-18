@@ -140,22 +140,22 @@ jobs:
         test ${{ steps.validate.outputs.exitcode }} -eq 
         
     - name: Send mail
-        if: always()
-        uses: dawidd6/action-send-mail@v2
-        with:
+      if: always()
+      uses: dawidd6/action-send-mail@v2
+      with:
           # mail server settings
-          server_address: smtp.gmail.com
-          server_port: 465
+        server_address: smtp.gmail.com
+        server_port: 465
           # user credentials
 #           # Optional (recommended) mail server username:
 #           username: ${{ secrets.EMAIL_USERNAME }}
 #           # Optional (recommended) mail server password:
 #           password: ${{ secrets.EMAIL_PASSWORD }}
           # email subject
-          subject: job status
+        subject: job status
           # email body as text
-          body:reponse
+        body: response
           # comma-separated string, send email to
-          to: prudhvinaagch@gmail.com
+        to: prudhvinaagch@gmail.com
           # from email name
-          from: Aditya
+        from: Aditya
