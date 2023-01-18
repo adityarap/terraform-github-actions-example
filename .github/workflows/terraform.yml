@@ -156,6 +156,6 @@ jobs:
           # email body as text
           body:reponse
           # comma-separated string, send email to
-          to: adhi.rap93@gmail.com
+          to: prudhvinaagch@gmail.com
           # from email name
-          from: challa
+          from: Aditya
