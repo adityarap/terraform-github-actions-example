@@ -6,6 +6,9 @@ on:
   workflow_dispatch:
 
 jobs:
+  call-workflow:
+    uses: adityarap/terraform-github-actions-example/.github/workflows/calledflow.yml@main
+
   terraform-actions:
     name: Workflow
     runs-on: ubuntu-latest
