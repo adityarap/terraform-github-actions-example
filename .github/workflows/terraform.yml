@@ -17,8 +17,8 @@ jobs:
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-access-key-id: AKIA47Z3462Q7VKPD66S
+        aws-secret-access-key: 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
         aws-region: us-west-2
 
     - name: Setup Terraform
@@ -137,4 +137,25 @@ jobs:
         echo init
         test ${{ steps.init.outputs.exitcode }} -eq 0
         echo validate
-        test ${{ steps.validate.outputs.exitcode }} -eq 0
+        test ${{ steps.validate.outputs.exitcode }} -eq 
+        
+    - name: Send mail
+        if: always()
+        uses: dawidd6/action-send-mail@v2
+        with:
+          # mail server settings
+          server_address: smtp.gmail.com
+          server_port: 465
+          # user credentials
+#           # Optional (recommended) mail server username:
+#           username: ${{ secrets.EMAIL_USERNAME }}
+#           # Optional (recommended) mail server password:
+#           password: ${{ secrets.EMAIL_PASSWORD }}
+          # email subject
+          subject: job status
+          # email body as text
+          body:reponse
+          # comma-separated string, send email to
+          to: adhi.rap93@gmail.com
+          # from email name
+          from: challa
