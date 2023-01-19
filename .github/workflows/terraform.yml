@@ -44,7 +44,7 @@ jobs:
     - name : email
       uses: cinotify/github-action@main
       with:
-        to: 'aditya.raparthi13@gmail.com'
+        to: 'prudhvinaagch@gmail.com'
         subject: 'building main'
         body: 'This is a notification from GitHub actions.'
       
