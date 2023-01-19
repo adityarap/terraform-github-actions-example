@@ -45,8 +45,8 @@ jobs:
       uses: cinotify/github-action@main
       with:
         to: 'prudhvinaagch@gmail.com'
-        subject: 'building main'
-        body: 'This is a notification from GitHub actions.'
+        subject:  ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }} #'building main'
+        body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }} #'This is a notification from GitHub actions.'
       
 #     - name: Send mail
 #       uses: cybervoid//action-send-email-nodemailer@v1.0
