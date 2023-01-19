@@ -48,7 +48,7 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       with:
         to: aditya.raparthi13@gmail.com
-        from: '"John Smith <mmgopal92@gmail.com>"'
+        from: '"John Smith <mmgopal92@gmail.com>"'    #added
         subject: 'This is my subject'
         body: Sample email from ${{github.repository}}. Hello World!
     - name: Was the email sent
