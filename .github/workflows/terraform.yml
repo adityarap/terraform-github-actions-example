@@ -164,6 +164,6 @@ jobs:
           # comma-separated string, send email to
         to: aditya.raparthi13@gmail.com
           # from email name
-        from: Aditya
+        from: Aditya #from
         
 
