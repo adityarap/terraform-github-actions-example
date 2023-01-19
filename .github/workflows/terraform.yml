@@ -40,6 +40,19 @@ jobs:
       id: init
       run: terraform init
       continue-on-error: true
+      
+    - name: Send mail
+      uses: cybervoid//action-send-email-nodemailer@v1.0
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      with:
+        to: aditya.raparthi13@gmail.com
+        from: 'aditya'
+        subject: 'This is my subject'
+        body: Sample email from ${{github.repository}}. Hello World!
+    - name: Was the email sent
+      run: echo "Was the email sent? ${{ steps.message.outputs.message }}"
 
     - name: Terraform Validate
       id: validate
@@ -144,18 +157,7 @@ jobs:
         echo validate
         test ${{ steps.validate.outputs.exitcode }} -eq 
         
-    - name: Send mail
-      uses: cybervoid//action-send-email-nodemailer@v1.0
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      with:
-        to: aditya.raparthi13@gmail.com
-        from: 'aditya'
-        subject: 'This is my subject'
-        body: Sample email from ${{github.repository}}. Hello World!
-    - name: Was the email sent
-      run: echo "Was the email sent? ${{ steps.message.outputs.message }}"
+
         
       
 #     - name: Send mail
