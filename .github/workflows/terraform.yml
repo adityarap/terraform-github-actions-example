@@ -144,26 +144,39 @@ jobs:
         echo validate
         test ${{ steps.validate.outputs.exitcode }} -eq 
         
-      
     - name: Send mail
-      if: always()
-      uses: dawidd6/action-send-mail@v2
+      uses: cybervoid//action-send-email-nodemailer@v1
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       with:
-          # mail server settings
-        server_address: smtp.gmail.com
-        server_port: 465
-          # user credentials
-          # Optional (recommended) mail server username:
-        username: adhi.rap93@gmail.com
-          # Optional (recommended) mail server password:
-        password: kmryllfhskjqmgsm
-          # email subject
-        subject: job status
-          # email body as text
-        body: response
-          # comma-separated string, send email to
         to: aditya.raparthi13@gmail.com
-          # from email name
-        from: Aditya #from
+        from: 'aditya'
+        subject: 'This is my subject'
+        body: Sample email from ${{github.repository}}. Hello World!
+    - name: Was the email sent
+      run: echo "Was the email sent? ${{ steps.message.outputs.message }}"
+        
+      
+#     - name: Send mail
+#       if: always()
+#       uses: dawidd6/action-send-mail@v2
+#       with:
+#           # mail server settings
+#         server_address: smtp.gmail.com
+#         server_port: 465
+#           # user credentials
+#           # Optional (recommended) mail server username:
+#         username: adhi.rap93@gmail.com
+#           # Optional (recommended) mail server password:
+#         password: kmryllfhskjqmgsm
+#           # email subject
+#         subject: job status
+#           # email body as text
+#         body: response
+#           # comma-separated string, send email to
+#         to: aditya.raparthi13@gmail.com
+#           # from email name
+#         from: Aditya #from
         
 
