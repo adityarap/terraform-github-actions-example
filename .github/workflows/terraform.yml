@@ -41,18 +41,25 @@ jobs:
       run: terraform init
       continue-on-error: true
       
-    - name: Send mail
-      uses: cybervoid//action-send-email-nodemailer@v1.0
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    - name : email
+      uses: cinotify/github-action@main
       with:
-        to: aditya.raparthi13@gmail.com
-        from: '"John Smith <mmgopal92@gmail.com>"'    #added
-        subject: 'This is my subject'
-        body: Sample email from ${{github.repository}}. Hello World!
-    - name: Was the email sent
-      run: echo "Was the email sent? ${{ steps.message.outputs.message }}"
+        to: 'aditya.raparthi13@gmail.com'
+        subject: 'building main'
+        body: 'This is a notification from GitHub actions.'
+      
+#     - name: Send mail
+#       uses: cybervoid//action-send-email-nodemailer@v1.0
+#       env:
+#         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#       with:
+#         to: aditya.raparthi13@gmail.com
+#         from: '"John Smith <mmgopal92@gmail.com>"'    #added
+#         subject: 'This is my subject'
+#         body: Sample email from ${{github.repository}}. Hello World!
+#     - name: Was the email sent
+#       run: echo "Was the email sent? ${{ steps.message.outputs.message }}"
 
     - name: Terraform Validate
       id: validate
