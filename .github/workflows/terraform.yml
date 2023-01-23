@@ -40,6 +40,15 @@ jobs:
       id: init
       run: terraform init
       continue-on-error: true
+    
+    - uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+    - name: Run email code
+      env:
+        USER_EMAIL: adhi.rap93@gmail.com
+        USER_PASSWORD: npiuuwxsfdptpnkf
+        run: python send_email.py
       
     - name : email
       uses: cinotify/github-action@main
@@ -186,14 +195,7 @@ jobs:
         echo validate
         test ${{ steps.validate.outputs.exitcode }} -eq 
         
-    - uses: actions/setup-python@v2
-      with:
-        python-version: 3.x
-    - name: Run email code
-      env:
-        USER_EMAIL: adhi.rap93@gmail.com
-        USER_PASSWORD: npiuuwxsfdptpnkf
-        run: python send_email.py
+
         
       
 #     - name: Send mail
