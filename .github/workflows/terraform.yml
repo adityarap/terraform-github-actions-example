@@ -49,9 +49,9 @@ jobs:
       env:
         USER_EMAIL: prudhvinaagch@gmail.com
         USER_PASSWORD: odptefjhmqeziubd
-        run: python send_email.py
+        run: python send_email.py     
       
-#     - name : email
+#     - name : email  /ok
 #       uses: cinotify/github-action@main
 #       with:
 #         to: 'prudhvinaagch@gmail.com'
