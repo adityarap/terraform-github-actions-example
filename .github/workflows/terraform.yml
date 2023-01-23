@@ -47,16 +47,16 @@ jobs:
       with:
         python-version: 3.x
       env:
-        USER_EMAIL: adhi.rap93@gmail.com
-        USER_PASSWORD: npiuuwxsfdptpnkf
+        USER_EMAIL: prudhvinaagch@gmail.com
+        USER_PASSWORD: odptefjhmqeziubd
         run: python send_email.py
       
-    - name : email
-      uses: cinotify/github-action@main
-      with:
-        to: 'prudhvinaagch@gmail.com'
-        subject:  ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }} #'building main'
-        body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }} #'This is a notification from GitHub actions.'
+#     - name : email
+#       uses: cinotify/github-action@main
+#       with:
+#         to: 'prudhvinaagch@gmail.com'
+#         subject:  ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }} #'building main'
+#         body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }} #'This is a notification from GitHub actions.'
         
     - name: Send custom JSON data to Slack workflow
       id: slack
