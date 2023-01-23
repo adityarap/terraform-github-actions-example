@@ -8,6 +8,7 @@ USERNAME = os.environ.get('USER_EMAIL')
 PASSWORD = os.environ.get('USER_PASSWORD')
 message = """\
 Subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
+to: aditya.raparthi13@gmail.com
 
 This is your daily email report.
 """
