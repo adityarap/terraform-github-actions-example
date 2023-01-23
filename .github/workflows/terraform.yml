@@ -41,10 +41,11 @@ jobs:
       run: terraform init
       continue-on-error: true
     
-    - uses: actions/setup-python@v2
+
+    - name: Run email code
+      uses: actions/setup-python@v2
       with:
         python-version: 3.x
-    - name: Run email code
       env:
         USER_EMAIL: adhi.rap93@gmail.com
         USER_PASSWORD: npiuuwxsfdptpnkf
