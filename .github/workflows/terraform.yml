@@ -52,7 +52,7 @@ jobs:
         run: python send_email.py     
       
 #     - name : email  
-#       uses: cinotify/github-action@main   
+#       uses: cinotify/github-action@main    /ok
 #       with:
 #         to: 'prudhvinaagch@gmail.com'
 #         subject:  ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }} #'building main'
