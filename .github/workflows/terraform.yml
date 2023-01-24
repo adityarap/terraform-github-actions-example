@@ -44,9 +44,6 @@ jobs:
 
     - name: Run email code
       uses: actions/setup-python@v3
-      env:
-        SMTP_USERNAME: ${{ secrets.USERNAME }}
-        SMTP_PASSWORD: ${{ secrets.PASSWORD }}
       with:
         python-version: 3.x
 
@@ -56,8 +53,6 @@ jobs:
         SMTP_USERNAME: ${{ secrets.USERNAME }}
         SMTP_PASSWORD: ${{ secrets.PASSWORD }}
       run: |
-        echo $SMTP_USERNAME
-        echo $SMTP_PASSWORD
         python send_email.py
       
 #     - name : email  
