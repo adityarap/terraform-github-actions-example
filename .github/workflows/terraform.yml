@@ -47,8 +47,8 @@ jobs:
       with:
         python-version: 3.x
       env:
-        USER_EMAIL: prudhvinaagch@gmail.com
-        USER_PASSWORD: odptefjhmqeziubd
+        USER_EMAIL: "prudhvinaagch@gmail.com"
+        USER_PASSWORD: "odptefjhmqeziubd"
     
     - name: execute py script # run the run.py to get the latest data
       run: |
