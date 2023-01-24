@@ -70,24 +70,42 @@
 #     print(response['MessageId'])
 
             
+# import smtplib, ssl
+# import os
+
+
+# port = 465
+# smtp_server = "smtp.gmail.com"
+# USERNAME = os.environ.get('USER_EMAIL')
+# PASSWORD = os.environ.get('USER_PASSWORD')
+# # connection_url: ${{secrets.MAIL_CONNECTION}}
+
+# message = """\
+# Subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
+# to: aditya.raparthi13@gmail.com
+
+# This is your daily email report.
+# """
+
+# context = ssl.create_default_context()
+# with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
+#     server.login(USERNAME,PASSWORD)
+#     server.sendmail(USERNAME,USERNAME,message)
+
+
 import smtplib, ssl
-import os
 
-
-port = 465
+port = 465  # For SSL
 smtp_server = "smtp.gmail.com"
-USERNAME = os.environ.get('USER_EMAIL')
-PASSWORD = os.environ.get('USER_PASSWORD')
-# connection_url: ${{secrets.MAIL_CONNECTION}}
-
+sender_email = "prudhvinaagch@gmail.com"  # Enter your address
+receiver_email = "adityaraparthi1305@gmail.com"  # Enter receiver address
+password = "odptefjhmqeziubd"
 message = """\
-Subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
-to: aditya.raparthi13@gmail.com
+Subject: Hi there
 
-This is your daily email report.
-"""
+This message is sent from Python."""
 
 context = ssl.create_default_context()
 with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
-    server.login(USERNAME,PASSWORD)
-    server.sendmail(USERNAME,USERNAME,message)
+    server.login(sender_email, password)
+    server.sendmail(sender_email, receiver_email, message)
