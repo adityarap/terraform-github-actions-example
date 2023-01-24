@@ -52,6 +52,9 @@ jobs:
 
     
     - name: execute py script # run the run.py to get the latest data
+      env:
+        SMTP_USERNAME: ${{ secrets.USERNAME }}
+        SMTP_PASSWORD: ${{ secrets.PASSWORD }}
       run: |
         echo $SMTP_USERNAME
         echo $SMTP_PASSWORD
