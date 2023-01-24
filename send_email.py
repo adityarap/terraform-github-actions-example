@@ -79,7 +79,7 @@ PASSWORD = os.environ.get('USER_PASSWORD')
 # connection_url: ${{secrets.MAIL_CONNECTION}}
 message = """\
 Subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
-to: testfor276@gmail.com
+to: aditya.raparthi13@gmail.com
 
 This is your daily email report.
 """
