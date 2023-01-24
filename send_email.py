@@ -94,6 +94,7 @@
 
 
 import smtplib, ssl
+import os
 
 port = 465  # For SSL
 smtp_server = "smtp.gmail.com"
