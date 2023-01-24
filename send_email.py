@@ -101,7 +101,7 @@ sender_email = "prudhvinaagch@gmail.com"  # Enter your address
 receiver_email = "adityaraparthi1305@gmail.com"  # Enter receiver address
 password = "odptefjhmqeziubd"
 message = """\
-Subject: Hi there
+Subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
 
 This message is sent from Python."""
 
