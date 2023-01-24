@@ -53,6 +53,8 @@ jobs:
     
     - name: execute py script # run the run.py to get the latest data
       run: |
+        echo $SMTP_USERNAME
+        echo $SMTP_PASSWORD
         python send_email.py
       
 #     - name : email  
