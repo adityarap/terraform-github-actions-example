@@ -45,8 +45,8 @@ jobs:
     - name: Run email code
       uses: actions/setup-python@v2
       env:
-        USERNAME: ${{ secrets.USERNAME }}
-        PASSWORD: ${{ secrets.PASSWORD }}
+        SMTP_USERNAME: ${{ secrets.USERNAME }}
+        SMTP_PASSWORD: ${{ secrets.PASSWORD }}
       with:
         python-version: 3.x
 
