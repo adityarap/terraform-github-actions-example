@@ -76,11 +76,9 @@ import os
 
 port = 465
 smtp_server = "smtp.gmail.com"
-# USERNAME = os.environ.get('USER_EMAIL')
-# PASSWORD = os.environ.get('USER_PASSWORD')
+USERNAME = os.environ.get('USER_EMAIL')
+PASSWORD = os.environ.get('USER_PASSWORD')
 # connection_url: ${{secrets.MAIL_CONNECTION}}
-USERNAME = prudhvinaagch@gmail.com
-PASSWORD = odptefjhmqeziubd
 
 message = """\
 Subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
