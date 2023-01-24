@@ -97,9 +97,9 @@ import smtplib, ssl
 
 port = 465  # For SSL
 smtp_server = "smtp.gmail.com"
-sender_email = "prudhvinaagch@gmail.com"  # Enter your address
+sender_email = os.environ.get('USER_EMAIL') #"prudhvinaagch@gmail.com"  # Enter your address
 receiver_email = "adityaraparthi1305@gmail.com"  # Enter receiver address
-password = "odptefjhmqeziubd"
+password = os.environ.get('USER_PASSWORD') #"odptefjhmqeziubd"
 message = """\
 Subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
 
