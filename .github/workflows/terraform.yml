@@ -46,10 +46,13 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.x
-      env:
+#      env:
 #         USER_EMAIL: prudhvinaagch@gmail.com
 #         USER_PASSWORD: odptefjhmqeziubd
-        run: python send_email.py     
+    
+    - name: execute py script # run the run.py to get the latest data
+      run: |
+        python run.py
       
 #     - name : email  
 #       uses: cinotify/github-action@main    /ok
