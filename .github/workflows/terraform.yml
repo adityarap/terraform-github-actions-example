@@ -47,12 +47,12 @@ jobs:
       with:
         python-version: 3.x
       env:
-        USER_EMAIL: prudhvinaagch@gmail.com
-        USER_PASSWORD: odptefjhmqeziubd
+#         USER_EMAIL: prudhvinaagch@gmail.com
+#         USER_PASSWORD: odptefjhmqeziubd
         run: python send_email.py     
       
 #     - name : email  
-#       uses: cinotify/github-action@main   /ok
+#       uses: cinotify/github-action@main   
 #       with:
 #         to: 'prudhvinaagch@gmail.com'
 #         subject:  ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }} #'building main'
