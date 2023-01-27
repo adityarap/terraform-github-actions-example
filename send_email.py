@@ -101,6 +101,9 @@ smtp_server = "smtp.gmail.com"
 sender_email = os.environ['SMTP_USERNAME'] #"prudhvinaagch@gmail.com"  # Enter your address
 receiver_email = "adityaraparthi1305@gmail.com"  # Enter receiver address
 password = os.environ['SMTP_PASSWORD'] #"odptefjhmqeziubd"
+job = os.environ['JOB']
+repo = os.environ['REPO']
+status = os.environ['STATUS']
 message = """\
 Subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
 
