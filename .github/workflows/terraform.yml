@@ -14,11 +14,6 @@ jobs:
   terraform-actions:
     name: Workflow
     runs-on: ubuntu-latest
-    env:
-      JOB: ${{github.job}}
-      REPO: ${{github.repository}}
-      STATUS: ${{job.status}}
-
     steps:
 
     - name: Checkout Repository
